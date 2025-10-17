@@ -93,7 +93,7 @@ def ConfirmConnection_Client(ip, port):
     while s.connect_ex((ip, port)) != 0:
         sleep(1)
     try:
-        s.send(b"jumper_client")
+        s.sendall(b"jumper_client")
         if s.recv(1024) == b"jumper_server":
             return s
     except:
@@ -106,6 +106,7 @@ def ConfirmConnection_Client(ip, port):
 def ConfirmConnection_Server(s):
     if s.recv(1024) == b'jumper_client':
         s.sendall(b'jumper_server')
+        sleep(0.5)
     else:
         raise Exception('Receive unexpected data.')
 
