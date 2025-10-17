@@ -1,0 +1,14 @@
+[project]
+name = "ComfyUI-Jumper"
+description = "Pass string and images between multiple ComfyUI via socket. Easy and intuitive nodes for remote connection."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies  = []
+
+[project.urls]
+Repository = "https://github.com/myonmu0/ComfyUI-Jumper"
+
+[tool.comfy]
+PublisherId = "myonmu0"
+DisplayName = "ComfyUI-Jumper"
+Icon = ""
