@@ -1,3 +1,4 @@
+[**日本語**](./README_JP.md)
 
 # ComfyUI-Jumper
 Designed to integrate local ComfyUI with remote ComfyUI(ex: Runpod, Vast.ai)<br />
@@ -10,8 +11,10 @@ Pass string and images between multiple ComfyUI via socket.
 
 
 ## Install
-Clone this repo to ComfyUI custom_nodes/ directory.
-
+```
+cd ComfyUI/custom_nodes/
+git clone https://github.com/myonmu0/ComfyUI-Jumper
+```
 
 ## Usage
 1. Rent one server, or start 2 ComfyUI on local.<br />
@@ -28,13 +31,13 @@ ssh root@REMOTE_IP -p REMOTE_PORT -NL 8282:localhost:8282
  - *Accessing remote ComfyUI with browser's private/secret mode is a cleaner option because starts with 0 browser data, and ends with 0 data.*<br />
 
 ⚠️ **Known Issue:**
- Job cancel button don't work when this node are running, in such case send dummy data to "addr" or restart ComfyUI.
+ Job cancel button don't work when this node are running, in such case restart ComfyUI.
 
 
 ## Details 
-1 Jumper node chain on 1 workflow.
-
 Select all node "mode" to "Client" on local, and "Server" on remote.
+
+1 Jumper node chain on 1 workflow.
 
 The node "order" determine the order of sending/receiving data, and must be chain correctly on both side. Don't forget to add at least 1 node on the end of Jumper node chain(like in the example)
 
@@ -43,5 +46,6 @@ The node "order" determine the order of sending/receiving data, and must be chai
 | png     | Small       |  Moderate   | Convert tensor to png before sending.	<sub>Progress bar: 1 = Conversion, 2 = Sending</sub>    |
 | zlib    | Large       |  Moderate   | Compress tensor before sending.          |
 | raw     | Very Large  |  Very Low   | Raw tensor are send.  | 
+
 
 
