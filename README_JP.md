@@ -2,7 +2,8 @@
 
 # ComfyUI-Jumper
 複数のComfyUIをリモート接続してStringとImagesを渡す事ができます。<br />
-ローカルやクラウドGPU（Ranpod、Vast.aiなど）のComfyUIと接続できます。
+ローカルやクラウドGPU（Ranpod、Vast.aiなど）のComfyUIと接続できます。<br />
+[YouTube動画デモ](https://youtu.be/VYwOMiZOJfU)<br />
 
 *リモート側*
 ![example](https://github.com/myonmu0/ComfyUI-Jumper/blob/main/examples/remote.png)

@@ -2,7 +2,8 @@
 
 # ComfyUI-Jumper
 Designed to integrate local ComfyUI with remote ComfyUI(ex: Runpod, Vast.ai)<br />
-Pass string and images between multiple ComfyUI via socket.
+Pass string and images between multiple ComfyUI via socket.<br />
+[YouTube Demo](https://youtu.be/VYwOMiZOJfU)<br />
 
 *On Remote*
 ![example](https://github.com/myonmu0/ComfyUI-Jumper/blob/main/examples/remote.png)
