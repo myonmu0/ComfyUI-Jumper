@@ -10,6 +10,12 @@ Pass string and images between multiple ComfyUI via socket.<br />
 *On Local*
 ![example](https://github.com/myonmu0/ComfyUI-Jumper/blob/main/examples/local.png)
 
+## What can do?
+- **Combining resource:** Instead of doing all job on 1 machine, you can do one part on local and another on remote.
+ 
+- **Usability:** Depending on the case, receiving the remote generated data inside local ComfyUI may be convenient.
+
+- **Privacy:** If run a workflow like examples/remote.json, your data are NOT write on disk in the server, so the likelihood of your data(prompts, input image and video, generated image and video) to leak or expose to someone may reduce, but still possible. If you expect privacy, don't connect your data to preview/save node in the server.
 
 ## Install
 ```
@@ -47,6 +53,7 @@ The node "order" determine the order of sending/receiving data, and must be chai
 | png     | Small       |  Moderate   | Convert tensor to png before sending.	<sub>Progress bar: 1 = Conversion, 2 = Sending</sub>    |
 | zlib    | Large       |  Moderate   | Compress tensor before sending.          |
 | raw     | Very Large  |  Very Low   | Raw tensor are send.  | 
+
 
 
 

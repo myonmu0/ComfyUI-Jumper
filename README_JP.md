@@ -11,6 +11,14 @@
 ![example](https://github.com/myonmu0/ComfyUI-Jumper/blob/main/examples/local.png)
 
 
+## メリット
+- **リソースの統合：** 全ての作業を１つのコンピューターでやる代わりに、この部分はローカル残りはリモートでやるができます。
+
+- **利便性：** ローカルのComfyUI内で、リモートComfyUIを操作して生成データを受け取れるのは状況次第では便利です。
+
+- **プライバシー：** サーバー側でexamples/remote.jsonのようなワークフローを実行すると、入力・生成データがディスクに書き込まれない為、あなたのデータが漏洩または見られる可能性が多少は下がると思います。プライバシーを期待する場合はサーバー側で入力・生成データをPreview/Save系のノードに繋げないで下さい。
+
+
 ## Install
 ```
 cd ComfyUI/custom_nodes/
@@ -47,6 +55,7 @@ ssh root@REMOTE_IP -p REMOTE_PORT -NL 8282:localhost:8282
 | png     | Small       |  Moderate   | Convert tensor to png before sending.	<sub>Progress bar: 1 = Conversion, 2 = Sending</sub>    |
 | zlib    | Large       |  Moderate   | Compress tensor before sending.          |
 | raw     | Very Large  |  Very Low   | Raw tensor are send.  | 
+
 
 
 
